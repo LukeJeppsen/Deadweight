@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=no">
+    <title>{{{ PRODUCT_NAME }}}</title>
+    <link rel="icon" type="image/png" href="TemplateData/favicon.png">
+    <link rel="stylesheet" href="TemplateData/style.css">
+  </head>
+  <body>
+    <div id="game">
+      <canvas id="unity-canvas" tabindex="-1"></canvas>
+      <div id="loading">
+        <div id="loading-title">{{{ PRODUCT_NAME }}}</div>
+        <div id="bar"><div id="bar-fill"></div></div>
+        <div id="loading-text">LOADING</div>
+      </div>
+      <div id="warning"></div>
+      <button id="fullscreen" title="Fullscreen">&#x26F6;</button>
+    </div>
+    <script>
+      var canvas = document.querySelector("#unity-canvas");
+      var loading = document.querySelector("#loading");
+      var barFill = document.querySelector("#bar-fill");
+      var loadingText = document.querySelector("#loading-text");
+      var fullscreenButton = document.querySelector("#fullscreen");
+
+      // Shows a message from Unity (errors stay until dismissed, warnings fade).
+      function unityShowBanner(msg, type) {
+        var warning = document.querySelector("#warning");
+        var div = document.createElement("div");
+        div.innerHTML = msg;
+        div.className = type === "error" ? "banner error" : "banner";
+        warning.appendChild(div);
+        if (type !== "error") setTimeout(function () { warning.removeChild(div); }, 5000);
+      }
+
+      // Keep the page from scrolling when the game uses Space or the arrow keys.
+      window.addEventListener("keydown", function (e) {
+        if ([" ", "ArrowUp", "ArrowDown", "ArrowLeft", "ArrowRight"].indexOf(e.key) >= 0) e.preventDefault();
+      }, { passive: false });
+      canvas.addEventListener("contextmenu", function (e) { e.preventDefault(); });
+      canvas.addEventListener("pointerdown", function () { canvas.focus(); });
+
+      var buildUrl = "Build";
+      var loaderUrl = buildUrl + "/{{{ LOADER_FILENAME }}}";
+      var config = {
+        arguments: [],
+        dataUrl: buildUrl + "/{{{ DATA_FILENAME }}}",
+        frameworkUrl: buildUrl + "/{{{ FRAMEWORK_FILENAME }}}",
+#if USE_THREADS
+        workerUrl: buildUrl + "/{{{ WORKER_FILENAME }}}",
+#endif
+#if USE_WASM
+        codeUrl: buildUrl + "/{{{ CODE_FILENAME }}}",
+#endif
+#if MEMORY_FILENAME
+        memoryUrl: buildUrl + "/{{{ MEMORY_FILENAME }}}",
+#endif
+#if SYMBOLS_FILENAME
+        symbolsUrl: buildUrl + "/{{{ SYMBOLS_FILENAME }}}",
+#endif
+        streamingAssetsUrl: "StreamingAssets",
+        companyName: {{{ JSON.stringify(COMPANY_NAME) }}},
+        productName: {{{ JSON.stringify(PRODUCT_NAME) }}},
+        productVersion: {{{ JSON.stringify(PRODUCT_VERSION) }}},
+        showBanner: unityShowBanner,
+      };
+
+      var script = document.createElement("script");
+      script.src = loaderUrl;
+      script.onload = function () {
+        createUnityInstance(canvas, config, function (progress) {
+          barFill.style.width = Math.round(100 * progress) + "%";
+          if (progress >= 0.9) loadingText.textContent = "STARTING";
+        }).then(function (unityInstance) {
+          loading.style.display = "none";
+          canvas.focus();
+          fullscreenButton.onclick = function () { unityInstance.SetFullscreen(1); };
+        }).catch(function (message) {
+          loadingText.textContent = "COULD NOT START";
+          unityShowBanner(message, "error");
+        });
+      };
+      document.body.appendChild(script);
+    </script>
+  </body>
+</html>

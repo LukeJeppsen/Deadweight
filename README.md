@@ -11,7 +11,7 @@
 
 A 2D pixel-art precision platformer made in Unity. You carry a sword far too big to fight with, and swinging it is how you move: the blade drags you wherever you swing it. Climb six areas of the Spire, earn a new skill in each one, and pull the Deadweight out of the peak so the sun can rise again.
 
-This repo holds the game's **art, audio and level files**, a [complete asset list](ASSETS.md), the [AI prompt & generation log](docs/DEADWEIGHT_Prompt_Generation_Log.pdf), and this write-up of how the game was made.
+This repo holds the **full Unity project**, the game's **art, audio and level files**, a [complete asset list](ASSETS.md), the [AI prompt & generation log](docs/DEADWEIGHT_Prompt_Generation_Log.pdf), and this write-up of how the game was made.
 
 ---
 
@@ -24,7 +24,8 @@ This repo holds the game's **art, audio and level files**, a [complete asset lis
 5. [Testing and release](#testing-and-release)
 6. [AI use](#ai-use)
 7. [What's in this repo](#whats-in-this-repo)
-8. [Lessons learned](#lessons-learned)
+8. [Opening the project](#opening-the-project)
+9. [Lessons learned](#lessons-learned)
 
 ---
 
@@ -248,6 +249,14 @@ The log covers the art, menu, story and music sessions (Oct 6–11). The six are
 ```
 README.md                  this write-up
 ASSETS.md                  every asset, with sizes, descriptions and source prompts
+Unity/                     the Unity project (open this folder in Unity Hub)
+  Assets/
+    Scripts/               46 game scripts
+    Editor/                16 editor tools (Tools > Deadweight, Tools > Pixel Art)
+    Levels/                level files the scenes are built from
+    Art/, Audio/, Tiles/, Sprites/, Prefabs/, Scenes/ ...
+  Packages/, ProjectSettings/
+  _Archive_CardGame/       the original card-game prototype
 assets/
   Player/                  all animations (body + sword layers, SVG sources, preview GIFs), _archive of old slashes
   Background/              first-area parallax layers + preview
@@ -267,7 +276,18 @@ docs/
 
 **Import settings for the art:** 16 pixels per unit, Filter Mode **Point**, Compression **None**.
 
-The full Unity project isn't in this repo. Each generated level scene is 79–143 MB, over GitHub's 100 MB file limit. They don't need to be stored, though, because `Rebuild Level Scenes` recreates them from the level files here.
+
+---
+
+## Opening the project
+
+1. Install **Unity 6000.3.10f1** (Unity 6) through Unity Hub.
+2. In Unity Hub, choose **Add → Add project from disk** and pick the **`Unity/`** folder in this repo.
+3. When it opens, run **Tools > Deadweight > Rebuild Level Scenes Only**.
+   The six level scenes are 79–143 MB each, over GitHub's 100 MB file limit, so they aren't stored in the repo. This rebuilds them from `Assets/Levels/*.json` in a few minutes.
+4. Open `Assets/Scenes/MainMenu.unity` and press **Play**.
+
+To build the web version, run **Tools > Deadweight > Build WebGL for itch.io**. The output goes to `Unity/Builds/` (git-ignored).
 
 ---
 

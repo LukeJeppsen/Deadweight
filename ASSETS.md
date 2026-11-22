@@ -1,6 +1,6 @@
 # DEADWEIGHT — Asset List
 
-Every asset that makes up the game. **Part 1** covers the files in this repo's [`assets/`](assets/) folder (art, audio and level files you can open directly). **Part 2** covers the Unity-only assets (tiles, animation clips, scenes, code) that live in the Unity project.
+Every asset that makes up the game. **Part 1** covers the files in this repo's [`assets/`](assets/) folder (art, audio and level files you can open directly). **Part 2** covers the Unity-only assets (tiles, animation clips, scenes, code) in the [`Unity/`](Unity/) project folder.
 
 The **Prompt** column points to the numbered prompts in the [Prompt & Generation Log](docs/DEADWEIGHT_Prompt_Generation_Log.pdf). Assets marked *later sessions* were made after that log (Oct 12 – Nov 22, 2026).
 
@@ -230,7 +230,7 @@ Dithered with a 4×4 Bayer pattern using only the six palette colours.
 
 # Part 2: Unity-only assets
 
-These live only in the Unity project (Unity 6, 6000.3.10f1). They are generated or wired up by the editor tools, so they aren't useful outside Unity.
+These live in the Unity project in [`Unity/`](Unity/) (Unity 6, 6000.3.10f1); paths below are relative to `Unity/Assets/`. Most are generated or wired up by the editor tools. The six level scenes are not in the repo (they're over GitHub's 100 MB limit); *Tools > Deadweight > Rebuild Level Scenes Only* recreates them from the level files.
 
 ## Tiles and animation
 
