@@ -1,0 +1,990 @@
+{
+ "tile_size": 8,
+ "columns": 16,
+ "rows": 7,
+ "pixels_per_unit": 8,
+ "neighbor_bits": {
+  "N": 1,
+  "NE": 2,
+  "E": 4,
+  "SE": 8,
+  "S": 16,
+  "SW": 32,
+  "W": 64,
+  "NW": 128
+ },
+ "rule_values": {
+  "1": "solid neighbour (This)",
+  "2": "empty neighbour (NotThis)",
+  "0": "any"
+ },
+ "tiles": {
+  "terrain_000": {
+   "col": 0,
+   "row": 0,
+   "terrain_rule": {
+    "mask": 0,
+    "rule": {
+     "N": 2,
+     "NE": 0,
+     "E": 2,
+     "SE": 0,
+     "S": 2,
+     "SW": 0,
+     "W": 2,
+     "NW": 0
+    }
+   }
+  },
+  "terrain_001": {
+   "col": 1,
+   "row": 0,
+   "terrain_rule": {
+    "mask": 1,
+    "rule": {
+     "N": 1,
+     "NE": 0,
+     "E": 2,
+     "SE": 0,
+     "S": 2,
+     "SW": 0,
+     "W": 2,
+     "NW": 0
+    }
+   }
+  },
+  "terrain_004": {
+   "col": 2,
+   "row": 0,
+   "terrain_rule": {
+    "mask": 4,
+    "rule": {
+     "N": 2,
+     "NE": 0,
+     "E": 1,
+     "SE": 0,
+     "S": 2,
+     "SW": 0,
+     "W": 2,
+     "NW": 0
+    }
+   }
+  },
+  "terrain_005": {
+   "col": 3,
+   "row": 0,
+   "terrain_rule": {
+    "mask": 5,
+    "rule": {
+     "N": 1,
+     "NE": 2,
+     "E": 1,
+     "SE": 0,
+     "S": 2,
+     "SW": 0,
+     "W": 2,
+     "NW": 0
+    }
+   }
+  },
+  "terrain_007": {
+   "col": 4,
+   "row": 0,
+   "terrain_rule": {
+    "mask": 7,
+    "rule": {
+     "N": 1,
+     "NE": 1,
+     "E": 1,
+     "SE": 0,
+     "S": 2,
+     "SW": 0,
+     "W": 2,
+     "NW": 0
+    }
+   }
+  },
+  "terrain_016": {
+   "col": 5,
+   "row": 0,
+   "terrain_rule": {
+    "mask": 16,
+    "rule": {
+     "N": 2,
+     "NE": 0,
+     "E": 2,
+     "SE": 0,
+     "S": 1,
+     "SW": 0,
+     "W": 2,
+     "NW": 0
+    }
+   }
+  },
+  "terrain_017": {
+   "col": 6,
+   "row": 0,
+   "terrain_rule": {
+    "mask": 17,
+    "rule": {
+     "N": 1,
+     "NE": 0,
+     "E": 2,
+     "SE": 0,
+     "S": 1,
+     "SW": 0,
+     "W": 2,
+     "NW": 0
+    }
+   }
+  },
+  "terrain_020": {
+   "col": 7,
+   "row": 0,
+   "terrain_rule": {
+    "mask": 20,
+    "rule": {
+     "N": 2,
+     "NE": 0,
+     "E": 1,
+     "SE": 2,
+     "S": 1,
+     "SW": 0,
+     "W": 2,
+     "NW": 0
+    }
+   }
+  },
+  "terrain_021": {
+   "col": 8,
+   "row": 0,
+   "terrain_rule": {
+    "mask": 21,
+    "rule": {
+     "N": 1,
+     "NE": 2,
+     "E": 1,
+     "SE": 2,
+     "S": 1,
+     "SW": 0,
+     "W": 2,
+     "NW": 0
+    }
+   }
+  },
+  "terrain_023": {
+   "col": 9,
+   "row": 0,
+   "terrain_rule": {
+    "mask": 23,
+    "rule": {
+     "N": 1,
+     "NE": 1,
+     "E": 1,
+     "SE": 2,
+     "S": 1,
+     "SW": 0,
+     "W": 2,
+     "NW": 0
+    }
+   }
+  },
+  "terrain_028": {
+   "col": 10,
+   "row": 0,
+   "terrain_rule": {
+    "mask": 28,
+    "rule": {
+     "N": 2,
+     "NE": 0,
+     "E": 1,
+     "SE": 1,
+     "S": 1,
+     "SW": 0,
+     "W": 2,
+     "NW": 0
+    }
+   }
+  },
+  "terrain_029": {
+   "col": 11,
+   "row": 0,
+   "terrain_rule": {
+    "mask": 29,
+    "rule": {
+     "N": 1,
+     "NE": 2,
+     "E": 1,
+     "SE": 1,
+     "S": 1,
+     "SW": 0,
+     "W": 2,
+     "NW": 0
+    }
+   }
+  },
+  "terrain_031": {
+   "col": 12,
+   "row": 0,
+   "terrain_rule": {
+    "mask": 31,
+    "rule": {
+     "N": 1,
+     "NE": 1,
+     "E": 1,
+     "SE": 1,
+     "S": 1,
+     "SW": 0,
+     "W": 2,
+     "NW": 0
+    }
+   }
+  },
+  "terrain_064": {
+   "col": 13,
+   "row": 0,
+   "terrain_rule": {
+    "mask": 64,
+    "rule": {
+     "N": 2,
+     "NE": 0,
+     "E": 2,
+     "SE": 0,
+     "S": 2,
+     "SW": 0,
+     "W": 1,
+     "NW": 0
+    }
+   }
+  },
+  "terrain_065": {
+   "col": 14,
+   "row": 0,
+   "terrain_rule": {
+    "mask": 65,
+    "rule": {
+     "N": 1,
+     "NE": 0,
+     "E": 2,
+     "SE": 0,
+     "S": 2,
+     "SW": 0,
+     "W": 1,
+     "NW": 2
+    }
+   }
+  },
+  "terrain_068": {
+   "col": 15,
+   "row": 0,
+   "terrain_rule": {
+    "mask": 68,
+    "rule": {
+     "N": 2,
+     "NE": 0,
+     "E": 1,
+     "SE": 0,
+     "S": 2,
+     "SW": 0,
+     "W": 1,
+     "NW": 0
+    }
+   }
+  },
+  "terrain_069": {
+   "col": 0,
+   "row": 1,
+   "terrain_rule": {
+    "mask": 69,
+    "rule": {
+     "N": 1,
+     "NE": 2,
+     "E": 1,
+     "SE": 0,
+     "S": 2,
+     "SW": 0,
+     "W": 1,
+     "NW": 2
+    }
+   }
+  },
+  "terrain_071": {
+   "col": 1,
+   "row": 1,
+   "terrain_rule": {
+    "mask": 71,
+    "rule": {
+     "N": 1,
+     "NE": 1,
+     "E": 1,
+     "SE": 0,
+     "S": 2,
+     "SW": 0,
+     "W": 1,
+     "NW": 2
+    }
+   }
+  },
+  "terrain_080": {
+   "col": 2,
+   "row": 1,
+   "terrain_rule": {
+    "mask": 80,
+    "rule": {
+     "N": 2,
+     "NE": 0,
+     "E": 2,
+     "SE": 0,
+     "S": 1,
+     "SW": 2,
+     "W": 1,
+     "NW": 0
+    }
+   }
+  },
+  "terrain_081": {
+   "col": 3,
+   "row": 1,
+   "terrain_rule": {
+    "mask": 81,
+    "rule": {
+     "N": 1,
+     "NE": 0,
+     "E": 2,
+     "SE": 0,
+     "S": 1,
+     "SW": 2,
+     "W": 1,
+     "NW": 2
+    }
+   }
+  },
+  "terrain_084": {
+   "col": 4,
+   "row": 1,
+   "terrain_rule": {
+    "mask": 84,
+    "rule": {
+     "N": 2,
+     "NE": 0,
+     "E": 1,
+     "SE": 2,
+     "S": 1,
+     "SW": 2,
+     "W": 1,
+     "NW": 0
+    }
+   }
+  },
+  "terrain_085": {
+   "col": 5,
+   "row": 1,
+   "terrain_rule": {
+    "mask": 85,
+    "rule": {
+     "N": 1,
+     "NE": 2,
+     "E": 1,
+     "SE": 2,
+     "S": 1,
+     "SW": 2,
+     "W": 1,
+     "NW": 2
+    }
+   }
+  },
+  "terrain_087": {
+   "col": 6,
+   "row": 1,
+   "terrain_rule": {
+    "mask": 87,
+    "rule": {
+     "N": 1,
+     "NE": 1,
+     "E": 1,
+     "SE": 2,
+     "S": 1,
+     "SW": 2,
+     "W": 1,
+     "NW": 2
+    }
+   }
+  },
+  "terrain_092": {
+   "col": 7,
+   "row": 1,
+   "terrain_rule": {
+    "mask": 92,
+    "rule": {
+     "N": 2,
+     "NE": 0,
+     "E": 1,
+     "SE": 1,
+     "S": 1,
+     "SW": 2,
+     "W": 1,
+     "NW": 0
+    }
+   }
+  },
+  "terrain_093": {
+   "col": 8,
+   "row": 1,
+   "terrain_rule": {
+    "mask": 93,
+    "rule": {
+     "N": 1,
+     "NE": 2,
+     "E": 1,
+     "SE": 1,
+     "S": 1,
+     "SW": 2,
+     "W": 1,
+     "NW": 2
+    }
+   }
+  },
+  "terrain_095": {
+   "col": 9,
+   "row": 1,
+   "terrain_rule": {
+    "mask": 95,
+    "rule": {
+     "N": 1,
+     "NE": 1,
+     "E": 1,
+     "SE": 1,
+     "S": 1,
+     "SW": 2,
+     "W": 1,
+     "NW": 2
+    }
+   }
+  },
+  "terrain_112": {
+   "col": 10,
+   "row": 1,
+   "terrain_rule": {
+    "mask": 112,
+    "rule": {
+     "N": 2,
+     "NE": 0,
+     "E": 2,
+     "SE": 0,
+     "S": 1,
+     "SW": 1,
+     "W": 1,
+     "NW": 0
+    }
+   }
+  },
+  "terrain_113": {
+   "col": 11,
+   "row": 1,
+   "terrain_rule": {
+    "mask": 113,
+    "rule": {
+     "N": 1,
+     "NE": 0,
+     "E": 2,
+     "SE": 0,
+     "S": 1,
+     "SW": 1,
+     "W": 1,
+     "NW": 2
+    }
+   }
+  },
+  "terrain_116": {
+   "col": 12,
+   "row": 1,
+   "terrain_rule": {
+    "mask": 116,
+    "rule": {
+     "N": 2,
+     "NE": 0,
+     "E": 1,
+     "SE": 2,
+     "S": 1,
+     "SW": 1,
+     "W": 1,
+     "NW": 0
+    }
+   }
+  },
+  "terrain_117": {
+   "col": 13,
+   "row": 1,
+   "terrain_rule": {
+    "mask": 117,
+    "rule": {
+     "N": 1,
+     "NE": 2,
+     "E": 1,
+     "SE": 2,
+     "S": 1,
+     "SW": 1,
+     "W": 1,
+     "NW": 2
+    }
+   }
+  },
+  "terrain_119": {
+   "col": 14,
+   "row": 1,
+   "terrain_rule": {
+    "mask": 119,
+    "rule": {
+     "N": 1,
+     "NE": 1,
+     "E": 1,
+     "SE": 2,
+     "S": 1,
+     "SW": 1,
+     "W": 1,
+     "NW": 2
+    }
+   }
+  },
+  "terrain_124": {
+   "col": 15,
+   "row": 1,
+   "terrain_rule": {
+    "mask": 124,
+    "rule": {
+     "N": 2,
+     "NE": 0,
+     "E": 1,
+     "SE": 1,
+     "S": 1,
+     "SW": 1,
+     "W": 1,
+     "NW": 0
+    }
+   }
+  },
+  "terrain_125": {
+   "col": 0,
+   "row": 2,
+   "terrain_rule": {
+    "mask": 125,
+    "rule": {
+     "N": 1,
+     "NE": 2,
+     "E": 1,
+     "SE": 1,
+     "S": 1,
+     "SW": 1,
+     "W": 1,
+     "NW": 2
+    }
+   }
+  },
+  "terrain_127": {
+   "col": 1,
+   "row": 2,
+   "terrain_rule": {
+    "mask": 127,
+    "rule": {
+     "N": 1,
+     "NE": 1,
+     "E": 1,
+     "SE": 1,
+     "S": 1,
+     "SW": 1,
+     "W": 1,
+     "NW": 2
+    }
+   }
+  },
+  "terrain_193": {
+   "col": 2,
+   "row": 2,
+   "terrain_rule": {
+    "mask": 193,
+    "rule": {
+     "N": 1,
+     "NE": 0,
+     "E": 2,
+     "SE": 0,
+     "S": 2,
+     "SW": 0,
+     "W": 1,
+     "NW": 1
+    }
+   }
+  },
+  "terrain_197": {
+   "col": 3,
+   "row": 2,
+   "terrain_rule": {
+    "mask": 197,
+    "rule": {
+     "N": 1,
+     "NE": 2,
+     "E": 1,
+     "SE": 0,
+     "S": 2,
+     "SW": 0,
+     "W": 1,
+     "NW": 1
+    }
+   }
+  },
+  "terrain_199": {
+   "col": 4,
+   "row": 2,
+   "terrain_rule": {
+    "mask": 199,
+    "rule": {
+     "N": 1,
+     "NE": 1,
+     "E": 1,
+     "SE": 0,
+     "S": 2,
+     "SW": 0,
+     "W": 1,
+     "NW": 1
+    }
+   }
+  },
+  "terrain_209": {
+   "col": 5,
+   "row": 2,
+   "terrain_rule": {
+    "mask": 209,
+    "rule": {
+     "N": 1,
+     "NE": 0,
+     "E": 2,
+     "SE": 0,
+     "S": 1,
+     "SW": 2,
+     "W": 1,
+     "NW": 1
+    }
+   }
+  },
+  "terrain_213": {
+   "col": 6,
+   "row": 2,
+   "terrain_rule": {
+    "mask": 213,
+    "rule": {
+     "N": 1,
+     "NE": 2,
+     "E": 1,
+     "SE": 2,
+     "S": 1,
+     "SW": 2,
+     "W": 1,
+     "NW": 1
+    }
+   }
+  },
+  "terrain_215": {
+   "col": 7,
+   "row": 2,
+   "terrain_rule": {
+    "mask": 215,
+    "rule": {
+     "N": 1,
+     "NE": 1,
+     "E": 1,
+     "SE": 2,
+     "S": 1,
+     "SW": 2,
+     "W": 1,
+     "NW": 1
+    }
+   }
+  },
+  "terrain_221": {
+   "col": 8,
+   "row": 2,
+   "terrain_rule": {
+    "mask": 221,
+    "rule": {
+     "N": 1,
+     "NE": 2,
+     "E": 1,
+     "SE": 1,
+     "S": 1,
+     "SW": 2,
+     "W": 1,
+     "NW": 1
+    }
+   }
+  },
+  "terrain_223": {
+   "col": 9,
+   "row": 2,
+   "terrain_rule": {
+    "mask": 223,
+    "rule": {
+     "N": 1,
+     "NE": 1,
+     "E": 1,
+     "SE": 1,
+     "S": 1,
+     "SW": 2,
+     "W": 1,
+     "NW": 1
+    }
+   }
+  },
+  "terrain_241": {
+   "col": 10,
+   "row": 2,
+   "terrain_rule": {
+    "mask": 241,
+    "rule": {
+     "N": 1,
+     "NE": 0,
+     "E": 2,
+     "SE": 0,
+     "S": 1,
+     "SW": 1,
+     "W": 1,
+     "NW": 1
+    }
+   }
+  },
+  "terrain_245": {
+   "col": 11,
+   "row": 2,
+   "terrain_rule": {
+    "mask": 245,
+    "rule": {
+     "N": 1,
+     "NE": 2,
+     "E": 1,
+     "SE": 2,
+     "S": 1,
+     "SW": 1,
+     "W": 1,
+     "NW": 1
+    }
+   }
+  },
+  "terrain_247": {
+   "col": 12,
+   "row": 2,
+   "terrain_rule": {
+    "mask": 247,
+    "rule": {
+     "N": 1,
+     "NE": 1,
+     "E": 1,
+     "SE": 2,
+     "S": 1,
+     "SW": 1,
+     "W": 1,
+     "NW": 1
+    }
+   }
+  },
+  "terrain_253": {
+   "col": 13,
+   "row": 2,
+   "terrain_rule": {
+    "mask": 253,
+    "rule": {
+     "N": 1,
+     "NE": 2,
+     "E": 1,
+     "SE": 1,
+     "S": 1,
+     "SW": 1,
+     "W": 1,
+     "NW": 1
+    }
+   }
+  },
+  "terrain_255": {
+   "col": 14,
+   "row": 2,
+   "terrain_rule": {
+    "mask": 255,
+    "rule": {
+     "N": 1,
+     "NE": 1,
+     "E": 1,
+     "SE": 1,
+     "S": 1,
+     "SW": 1,
+     "W": 1,
+     "NW": 1
+    }
+   }
+  },
+  "terrain_fill_0": {
+   "col": 0,
+   "row": 3
+  },
+  "terrain_fill_1": {
+   "col": 1,
+   "row": 3
+  },
+  "terrain_fill_2": {
+   "col": 2,
+   "row": 3
+  },
+  "terrain_fill_3": {
+   "col": 3,
+   "row": 3
+  },
+  "terrain_fill_4": {
+   "col": 4,
+   "row": 3
+  },
+  "terrain_fill_5": {
+   "col": 5,
+   "row": 3
+  },
+  "terrain_top_0": {
+   "col": 6,
+   "row": 3
+  },
+  "terrain_top_1": {
+   "col": 7,
+   "row": 3
+  },
+  "terrain_top_2": {
+   "col": 8,
+   "row": 3
+  },
+  "terrain_top_3": {
+   "col": 9,
+   "row": 3
+  },
+  "terrain_ceiling_0": {
+   "col": 10,
+   "row": 3
+  },
+  "terrain_ceiling_1": {
+   "col": 11,
+   "row": 3
+  },
+  "terrain_leftwall_0": {
+   "col": 12,
+   "row": 3
+  },
+  "terrain_leftwall_1": {
+   "col": 13,
+   "row": 3
+  },
+  "terrain_rightwall_0": {
+   "col": 14,
+   "row": 3
+  },
+  "terrain_rightwall_1": {
+   "col": 15,
+   "row": 3
+  },
+  "platform_left": {
+   "col": 0,
+   "row": 4
+  },
+  "platform_mid_0": {
+   "col": 1,
+   "row": 4
+  },
+  "platform_mid_1": {
+   "col": 2,
+   "row": 4
+  },
+  "platform_right": {
+   "col": 3,
+   "row": 4
+  },
+  "platform_single": {
+   "col": 4,
+   "row": 4
+  },
+  "platform_cracked_0": {
+   "col": 5,
+   "row": 4
+  },
+  "backwall_0": {
+   "col": 6,
+   "row": 4
+  },
+  "backwall_1": {
+   "col": 7,
+   "row": 4
+  },
+  "backwall_2": {
+   "col": 8,
+   "row": 4
+  },
+  "backwall_3": {
+   "col": 9,
+   "row": 4
+  },
+  "backwall_4": {
+   "col": 10,
+   "row": 4
+  },
+  "backwall_5": {
+   "col": 11,
+   "row": 4
+  },
+  "decor_grass_a": {
+   "col": 0,
+   "row": 5
+  },
+  "decor_grass_b": {
+   "col": 1,
+   "row": 5
+  },
+  "decor_grass_c": {
+   "col": 2,
+   "row": 5
+  },
+  "decor_tallgrass": {
+   "col": 3,
+   "row": 5
+  },
+  "decor_pebbles": {
+   "col": 4,
+   "row": 5
+  },
+  "decor_rock": {
+   "col": 5,
+   "row": 5
+  },
+  "decor_mushroom": {
+   "col": 6,
+   "row": 5
+  },
+  "decor_flower": {
+   "col": 7,
+   "row": 5
+  },
+  "hang_stalactite_a": {
+   "col": 8,
+   "row": 5
+  },
+  "hang_stalactite_b": {
+   "col": 9,
+   "row": 5
+  },
+  "spike_up": {
+   "col": 0,
+   "row": 6
+  },
+  "spike_right": {
+   "col": 1,
+   "row": 6
+  },
+  "spike_down": {
+   "col": 2,
+   "row": 6
+  },
+  "spike_left": {
+   "col": 3,
+   "row": 6
+  }
+ }
+}
